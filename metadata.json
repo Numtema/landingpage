@@ -1,0 +1,7 @@
+{
+  "name": "Tara Money Clone",
+  "description": "A pixel-perfect, world-class landing page for Tara Money, a conversational financial service facilitating transfers and merchant payments via messaging apps.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
