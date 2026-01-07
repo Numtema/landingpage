@@ -1,20 +1,23 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
 
-# Run and deploy your AI Studio app
+# 🚀 Tara Money Landing Page - Architecture
 
-This contains everything you need to run your app locally.
+Cette application est conçue pour être **AI-Friendly** et extrêmement facile à maintenir.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1HzTl-Jmi9vTqD4gzPsIYgNhsHSP_fRi9
+## 📂 Structure du Projet
 
-## Run Locally
+- `config.ts` : **Single Source of Truth**. Contient toutes les couleurs, textes, espacements et données. **Modifiez ce fichier pour changer le contenu ou le style.**
+- `App.tsx` : Composants React "stateless" qui consomment la configuration. Logique d'animation (Framer Motion) et SVGs de marques.
+- `index.html` : Configuration Tailwind, polices (Inter) et styles globaux.
 
-**Prerequisites:**  Node.js
+## 🤖 Guide de Modification (Agent IA)
 
+Pour modifier le site, ne touchez pas à `App.tsx` sauf si vous devez changer la logique structurelle. 
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+1. **Changer une couleur** : Allez dans `THEME.colors` dans `config.ts`.
+2. **Mettre à jour un texte** : Allez dans l'objet `CONTENT` dans `config.ts`.
+3. **Ajouter un service** : Ajoutez un objet dans `CONTENT.payments.methods`. Les icônes SVG sont mappées par `id`.
+
+## 🎨 Design System
+- **Polices** : Inter (300 à 900).
+- **Couleurs** : Orange (#FF4D00) pour l'action, Gris neutres pour le contenu.
+- **Rayons** : Arrondis ultra-larges (3rem) pour un look "App" moderne.
